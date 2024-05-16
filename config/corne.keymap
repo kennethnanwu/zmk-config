@@ -1,5 +1,4 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
+opyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
@@ -17,38 +16,39 @@
 // |  TAB       |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  BKSP  |
 // | CTRL(ESC)  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |CTRL(') |
 // | SHFT       |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |SHFT(CAPS) |
-//                          | GUI | LWR | SPC |   | ENT | RSE | ALT |
+//                    | ALT | GUI | SPC |   | ENT | LWR | ALT |
                         bindings = <
-   &kp TAB       &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &mt LCTRL ESC &kp A &kp S &kp D &kp F &kp G      &kp H &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
-   &kp LSHFT     &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT CAPSLOCK
-                      &kp LGUI &mo 1 &kp SPACE      &kp RET &mo 2 &kp RALT
+   &kp TAB       &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &mt LCTRL ESC &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
+   &kp LSHFT     &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT CLCK
+                  &kp LALT &kp LGUI &kp SPACE    &kp RET &tog 1 &kp RALT
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |      |cmd+1| cmd+2 | cmd+3 | cmd+4| cmd+5 |   | cmd+6 | cmd+7 |cmd+8 | cmd+9 |cmd+0|      |
-// |      |     |  HOME | PG UP | PG DN|  END  |   |  LFT  |  DWN  |  UP  |  RGT  |     |
-// |      |ctl+1| ctl+2  |ctl+3  |ctl+4| ctl+5 |   | ctl+6 | ctl+7 |ctl+8 | ctl+9 |ctl+0|      |
-//                           |     |     |     |   |  ALT  | GUI   |     |
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
+// |      |     |HOME |PGUP |PGDN | END |   | LFT | DWN |  UP | RGT |     |  \   |
+// |      | BT0 | BT1 | BT2 |VOLDN|VOLUP|   |  `  |  -  |  =  |  [  |  ]  |      |
+//                    |     |     | SHFT|   |     |     |     |
                         bindings = <
-   &trans  &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)     &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9) &kp LG(N0) &trans
-   &trans  &trans     &kp HOME   &kp PG_UP  &kp PG_DN  &kp END        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans 
-   &trans  &kp LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4) &kp LC(N5)     &kp LC(N6) &kp LC(N7) &kp LC(N8) &kp LC(N9) &kp LC(N0) &trans
-                                     &trans   &trans   &trans         &kp RALT    &kp RGUI   &trans
+   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp N7    &kp N8      &kp N9    &kp N0        &trans
+   &trans    &trans       &kp HOME     &kp PG_UP    &kp PG_DN    &kp END        &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT &trans        &kp BSLH
+   &trans    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp C_VOL_DN &kp C_VOL_UP   &kp GRAVE &kp MINUS &kp EQUAL   &kp LBKT  &kp RBKT      &trans
+                                    &trans       &trans       &kp LSHFT         &trans    &trans   &trans
                         >;
                 };
+
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  `   |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |     |
-// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
-// |      | BT0 | BT1 |     |VOLDN|VOLUP|   |  \  |  -  |  =  |  [  |  ]  |     |
-//                    |     |     |     |   |     |     |     |
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp GRAVE &kp EXCL     &kp AT       &kp HASH &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-   &trans    &kp N1       &kp N2       &kp N3   &kp N4       &kp N5           &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &trans
-   &trans    &bt BT_SEL 0 &bt BT_SEL 1 &trans   &kp C_VOL_DN &kp C_VOL_UP     &kp BSLH  &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &trans
-                                               &trans  &kp LSHFT  &trans      &trans  &trans  &trans
+   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
+   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
+                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
         };
