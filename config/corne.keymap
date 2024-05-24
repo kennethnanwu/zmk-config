@@ -22,11 +22,11 @@
                 lower_layer {
                         bindings = <
 //╭────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬────────╮
-   &trans  &mt GRAVE TILDE    &trans       &trans        &trans        &trans                   &trans       &kp PG_DN     &kp PG_UP  &mt MINUS UNDER &mt EQUAL PLUS &trans
+   &trans&mt LS(GRAVE) GRAVE  &trans       &trans        &trans        &trans                   &trans       &kp PG_DN     &kp PG_UP  &mt LS(MINUS) MINUS &mt LS(EQUAL) EQUAL &trans
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────┤
    &kp CAPS   &kp LCTRL      &kp LALT     &kp LGUI      &kp LSHFT      &trans                   &kp LEFT      &kp DOWN      &kp UP       &kp RIGHT      &trans      &trans
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────┤
-   &trans   &bt BT_SEL 0  &bt BT_SEL 1  &kp C_VOL_DN  &kp C_VOL_UP     &trans                   &trans     &mt LBKT LBRC &mt RBKT RBRC     &trans    &kp BSLH PIPE  &trans
+   &trans   &bt BT_SEL 0  &bt BT_SEL 1  &kp C_VOL_DN  &kp C_VOL_UP     &trans                   &trans     &mt LS(LBKT) LBKT &mt LS(RBKT) RBKT &trans &mt LS(BSLH) BSLH &trans
 //╰────────┼─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ╰──────╯ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴────────╯
                                            &trans        &trans        &trans                   &trans        &trans        &trans       
 //                                     ╰─────────────┴─────────────┴─────────────╯          ╰─────────────┴─────────────┴─────────────╯                                           
