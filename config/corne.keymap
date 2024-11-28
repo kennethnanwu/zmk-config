@@ -15,7 +15,7 @@
          compatible = "zmk,behavior-hold-tap";
          #binding-cells = <2>;
          tapping-term-ms = <200>;    // <---[[moderate duration]]
-         quick-tap-ms = <0>;
+         quick-tap-ms = <100>;
          flavor = "balanced";
          bindings = <&kp>, <&kp>;
       };
@@ -51,7 +51,7 @@
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────┤
    &kp CAPS     &kp Z         &kp X         &kp C         &kp V         &kp B                    &kp N         &kp M       &kp COMMA       &kp DOT      &kp FSLH    &none
 //╰────────┼─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ╰──────╯ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴────────╯
-                                           &mo SYMB    &kp SPACE    &tt NAVI NAVI           &plt NUMB BSPC    &kp RET     &mo SYS 
+                                           &mo SYMB    &kp SPACE    &mo NAVI                &plt NUMB BSPC    &kp RET     &mo SYS 
 //                                     ╰─────────────┴─────────────┴─────────────╯          ╰─────────────┴─────────────┴─────────────╯                                           
          >;
       };
