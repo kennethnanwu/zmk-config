@@ -20,6 +20,15 @@
          bindings = <&kp>, <&kp>;
       };
       
+      lbhm: long_balanced_homerow_mods {
+         compatible = "zmk,behavior-hold-tap";
+         #binding-cells = <2>;
+         tapping-term-ms = <250>;    // <---[[moderate duration]]
+         quick-tap-ms = <100>;
+         flavor = "balanced";
+         bindings = <&kp>, <&kp>;
+      };
+      
       tt: tap_toggle {
          compatible = "zmk,behavior-hold-tap";
          #binding-cells = <2>;
@@ -47,7 +56,7 @@
 //╭────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬────────╮
    &kp TAB      &kp Q         &kp W         &kp E         &kp R         &kp T                    &kp Y         &kp U         &kp I         &kp O         &kp P     &kp BSPC
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────┤
-   &kp ESC  &bhm LCTRL A  &bhm LALT S   &bhm LGUI D   &bhm LSHFT F      &kp G                    &kp H     &bhm RSHFT J   &bhm RGUI K   &bhm LALT L  &bhm RCTRL SEMI &kp SQT
+   &kp ESC  &lbhm LCTRL A  &bhm LALT S   &bhm LGUI D   &bhm LSHFT F      &kp G                    &kp H     &bhm RSHFT J   &bhm RGUI K   &bhm LALT L  &lbhm RCTRL SEMI &kp SQT
 //├────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────┤
    &kp CAPS     &kp Z         &kp X         &kp C         &kp V         &kp B                    &kp N         &kp M       &kp COMMA       &kp DOT      &kp FSLH    &none
 //╰────────┼─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ╰──────╯ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴────────╯
